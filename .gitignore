@@ -34,3 +34,24 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+
+# ignore api keys
+*api_key*
+
+# exclude everything in data but keep folder
+build/data/*
+!/build/data/.gitkeep
+
+test/data/*
+!/test/data/.gitkeep
+
+*.svg
+
+# packrat libraries
+packrat/lib*
+packrat/src
+
+# snakemake tmp dir
+.snakemake
+packrat/lib*/
+packrat/src/

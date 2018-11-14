@@ -1,0 +1,13 @@
+Package: snakemakeExamples
+Title: Examples showcasing usage of snakemake in R data processing workflow
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Christian",
+           family = "Homberg",
+           role = c("aut", "cre"),
+           email = "christianhomberg@gmail.com")
+Description: Examples showcasing usage of snakemake in R data processing workflow
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

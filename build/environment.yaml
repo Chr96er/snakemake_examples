@@ -1,0 +1,4 @@
+api_key_path: "../lastfm_api_key"
+lastfm_api_url: "http://ws.audioscrobbler.com/2.0/"
+pages: "150"
+workdir: "build"
