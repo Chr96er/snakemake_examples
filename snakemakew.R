@@ -12,7 +12,7 @@ require(magrittr)
 #' @param args any additional valid snakemake arguments are being passed
 #'
 #' @export
-snakemake = function(rules, dryrun = F, forceall = F, code_changes = T, cores = "all",
+snakemake = function(rules, dryrun = F, forceall = F, code_changes = F, cores = "all",
                      snakefile = "Snakefile", args = c("-p"), async = F, profile = "test") {
   if (dryrun) {
     args %<>% c("--dryrun")
@@ -33,7 +33,6 @@ snakemake = function(rules, dryrun = F, forceall = F, code_changes = T, cores = 
   args %<>%  c(glue::glue("--cores {cores}"))
 
   args %<>% c(glue::glue("--profile {profile}"))
-  print(glue::glue("--profile {profile}"))
 
   if (async && "future" %in% installed.packages()) {
     library(future)

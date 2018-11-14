@@ -1,2 +1,2 @@
 profile: "test"
-configfile: "environment.yaml"
+configfile: "test/environment.yaml"
