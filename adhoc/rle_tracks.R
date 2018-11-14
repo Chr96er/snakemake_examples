@@ -2,7 +2,9 @@ library(magrittr)
 library(data.table)
 library(purrr)
 
-dt = feather::read_feather("data/processed/02_transformed/scrobble_history_transformed.feather") %>%
+sm = snakemake
+
+dt = feather::read_feather(sm@input[[1]]) %>%
   setDT
 
 # tracks listened to multiple times in a row

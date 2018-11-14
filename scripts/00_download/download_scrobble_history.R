@@ -3,7 +3,9 @@ library(magrittr)
 library(purrr)
 library(httr)
 
-sm_config = snakemake@config
+sm = snakemake
+
+sm_config = sm@config
 
 stopifnot(file.exists(sm_config$api_key_path))
 api_key = readLines(sm_config$api_key_path)
@@ -25,4 +27,4 @@ res_l = map(1:sm_config$pages, function(current_page) {
   httr_res %>% content %>% .$recenttracks %>% .$track
 })
 
-jsonlite::write_json(res_l, "data/processed/00_downloaded/scrobble_history_cached.json")
+jsonlite::write_json(res_l, sm@output[[1]])
