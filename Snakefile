@@ -1,3 +1,9 @@
+rule rle_analysis:
+  input:
+    "data/processed/02_transformed/scrobble_history_transformed.feather"
+  script:
+    "adhoc/rle_tracks.R"
+
 rule transform_history:
   input:
     "data/processed/01_cleansed/scrobble_history_cleansed.feather"

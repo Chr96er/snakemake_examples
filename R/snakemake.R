@@ -1,14 +1,14 @@
 
 #' Snakemake wrapper
 #'
-#' @rdname snakemake
+#' @rdname snakemaker
 #' @param rules rules to run
 #' @param dryRun boolean flag indicating test run
 #' @param cores number of cores to use
 #' @param args any additional valid snakemake arguments are being passed
 #'
 #' @export
-snakemake = function(rules, dryrun = F, forceall = F, code_changes = T, cores = "all",
+snakemaker = function(rules, dryrun = F, forceall = F, code_changes = T, cores = "all",
                      snakefile = "Snakefile", args = c("-p"), async = F) {
   if (dryrun) {
     args %<>% c("--dryrun")
@@ -37,7 +37,7 @@ snakemake = function(rules, dryrun = F, forceall = F, code_changes = T, cores = 
   }
 }
 
-#' @rdname snakemake
+#' @rdname snakemaker
 #'
 #' @param args
 #'
@@ -47,7 +47,7 @@ run_snakemake = function(args) {
 }
 
 
-#' @rdname snakemake
+#' @rdname snakemaker
 #' @export
 create_dag = function(args = c("-p"), filename = "dag.svg") {
   args %<>% c("--dag")

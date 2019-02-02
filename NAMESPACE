@@ -2,4 +2,4 @@
 
 export(create_dag)
 export(run_snakemake)
-export(snakemake)
+export(snakemaker)
